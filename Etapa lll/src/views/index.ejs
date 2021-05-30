@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+		<title>TEST</title>
+	</head>
+
+	<body>
+		
+		<div class="m-3">
+			<img src="https://cdn-static.talent.com/img/common/talent_logo_purple_220.png" alt="talent">
+		</div>
+		
+	
+		<nav class="navbar navbar-dark bg-dark mb-2">
+			<a href="/" class="navbar-brand">TEST: ANDRÉS FELIPE PALACIOS SARMIENTO</a>
+		</nav>
+	
+		<div class="mb-4 mx-4 border-bottom">
+			<h2>JOBS</h2>
+		</div>
+	
+		<div class="container">
+			<div class="row">
+				
+				<!--List-->
+				
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">N°</th>
+							<th scope="col">Job Title</th>
+							<th scope="col">Job Location</th>
+							<th scope="col">Job Url</th>
+						</tr>
+					</thead>
+				<tbody>
+					<% for (let i = 0; i < listOffers.length; i++ ) { %>
+					<tr>
+						<td scope="row"><%= i + 1 %></td>
+						<td><%= listOffers[i].title %></td>
+						<td><%= listOffers[i]['location'] %></td>
+						<td>
+							<a href="<%= listOffers[i]['url'] %>" target="_blank"
+								><%= listOffers[i]['url'] %></a
+							>
+						</td>
+					</tr>
+					<% } %>
+				</tbody>
+			</table>
+		</main>
+	</body>
+</html>
